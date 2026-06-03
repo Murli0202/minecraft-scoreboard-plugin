@@ -1,0 +1,43 @@
+name: ScoreboardPlugin
+version: 1.0.0
+main: com.example.scoreboard.ScoreboardPlugin
+api-version: 26.1
+description: Sidebar scoreboard with money, MurliTokens, rank, kills, deaths and ping.
+authors: [YourName]
+
+# Vault is optional — if present, money is read from your economy plugin (EssentialsX etc.)
+softdepend: [Vault]
+
+commands:
+  murlitoken:
+    description: Manage MurliTokens for players.
+    usage: /murlitoken <give|take|set|check> <player> [amount]
+    permission: scoreboard.token.admin
+  scoreboardreload:
+    description: Reload the ScoreboardPlugin config.
+    usage: /scoreboardreload
+    permission: scoreboard.reload
+    aliases: [sbreload, sbrl]
+
+permissions:
+  scoreboard.token.admin:
+    description: Allows managing MurliTokens.
+    default: op
+  scoreboard.reload:
+    description: Allows reloading the ScoreboardPlugin config.
+    default: op
+  rank.owner:
+    description: Owner rank.
+    default: false
+  rank.admin:
+    description: Admin rank.
+    default: op
+  rank.mod:
+    description: Mod rank.
+    default: false
+  rank.vip:
+    description: VIP rank.
+    default: false
+  rank.member:
+    description: Member rank.
+    default: true
