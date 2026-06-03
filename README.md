@@ -8,7 +8,21 @@ A lightweight Paper plugin that shows a fully customizable sidebar scoreboard wi
 
 - Paper Server (26.1.x)
 - Java 21
-- No dependencies — works out of the box
+- [Vault](https://www.spigotmc.org/resources/vault.34315/) + economy plugin like [EssentialsX](https://essentialsx.net/) *(optional but recommended)*
+
+---
+
+## 💰 Economy / Vault Integration
+
+The plugin automatically hooks into **Vault** if it is installed. This means the `{money}` placeholder on the scoreboard shows the player's balance from your existing economy plugin (EssentialsX, CMI, etc.).
+
+| Situation | What happens |
+|---|---|
+| Vault + EssentialsX installed | Uses EssentialsX balances, formatted by Vault |
+| Vault installed but no economy plugin | Falls back to built-in money system |
+| Vault not installed | Uses built-in money system (saved in `money.yml`) |
+
+To use Vault: just drop `Vault.jar` and your economy plugin into `/plugins/` — no config needed.
 
 ---
 
